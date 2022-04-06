@@ -4,7 +4,7 @@ import './Card.css';
 const Card = ({tricks}) => {
     let cards = tricks.map(trick => {
         return (
-            <div className="card">
+            <div className="card" key={trick.id} id={trick.id}>
                 <p> {`${trick.stance} ${trick.name}`} </p>
                 <p> {`Obstacle: ${trick.obstacle}`} </p>
                 <p> Link to Tutorial: </p>

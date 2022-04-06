@@ -11,13 +11,15 @@ class Form extends Component {
 
     render() {
         return (
-            <form>
-                <select>
+            <form className="form">
+                <label for="stance" className="label">Choose your Stance:</label>
+                <select name="stance">
                     <option value="Test 1"> Test 1 </option>
                     <option value="Test 2"> Test 2 </option>
                 </select>
                 <input type="text"/>
-                <select>
+                <label for="obstacle" className="label">Choose your Obstacle:</label>
+                <select name="obstacle">
                     <option value="Test 1"> Test 1 </option>
                     <option value="Test 2"> Test 2 </option>
                 </select>
