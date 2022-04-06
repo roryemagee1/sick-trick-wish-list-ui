@@ -6,7 +6,9 @@ const Tricks = () => {
     let output = <Card />;
 
     return (
-        <div>
+        <div className="tricks">
+            {output}
+            {output}
             {output}
         </div>
     )
