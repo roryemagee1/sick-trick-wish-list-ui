@@ -15,9 +15,7 @@ class App extends Component {
     fetch('http://localhost:3001/api/v1/tricks')
     .then(response => response.json())
     .then(data => {
-      console.log(data);
-      this.setState({tricks: data});
-      console.log(this.state);
+      this.setState({ tricks: data });
     })
     .catch(error => console.log(error));
   }
@@ -25,12 +23,17 @@ class App extends Component {
   componentDidMount = () => {
     this.fetchTricks();
   }
+
+  addTrick = (newTrick) => {
+    console.log(newTrick);
+    this.setState({ tricks: [...this.state.tricks].push(newTrick) })
+  }
   
   render() {
     return (
       <div className="App">
         <h1>Sick Trick Wish List</h1>
-        <Form />
+        <Form addTrick={this.state.addTrick}/>
         <Tricks tricks={this.state.tricks}/>
       </div>
     );
