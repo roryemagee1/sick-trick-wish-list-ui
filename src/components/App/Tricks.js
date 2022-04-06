@@ -6,9 +6,7 @@ const Tricks = ({tricks}) => {
     let output = <Card tricks={tricks}/>;
 
     return (
-        <div className="tricks">
-            {output}
-            {output}
+        <div>
             {output}
         </div>
     )
