@@ -6,7 +6,7 @@ class Form extends Component {
         super()
         this.state = {
             stance: '',
-            trick: '',
+            name: '',
             obstacle: '',
             link: '',
         }
@@ -26,7 +26,7 @@ class Form extends Component {
         this.props.addTrick(input);
         this.setState({
             stance: '',
-            trick: '',
+            name: '',
             obstacle: '',
             link: ''
         })
@@ -40,7 +40,7 @@ class Form extends Component {
                     <option value="regular"> Regular </option>
                     <option value="switch"> Switch </option>
                 </select>
-                <input type="text" name="trick" value={this.state.trick} placeholder="Name of Trick" onChange={(e) => this.updateState(e)} required/>
+                <input type="text" name="name" value={this.state.trick} placeholder="Name of Trick" onChange={(e) => this.updateState(e)} required/>
                 <select name="obstacle" value={this.state.obstacle} onChange={(e) => this.updateState(e)} required>
                     <option value="obstacleChoice"> Choose your Obstacle </option>
                     <option value="flatground"> Flatground </option>
@@ -50,7 +50,7 @@ class Form extends Component {
                     <option value="pool"> Pool </option>
                 </select>
                 <input type="text" name="link" value={this.state.link} placeholder="Link to Tutorial" onChange={(e) => this.updateState(e)} required/>
-                <input type="submit" value="Send it!" onSubmit={(e) => this.submitTrick(e)}/>
+                <input type="submit" value="Send it!" onClick={(e) => this.submitTrick(e)}/>
             </form>
         )
     }

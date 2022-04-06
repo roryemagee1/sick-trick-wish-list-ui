@@ -33,7 +33,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Sick Trick Wish List</h1>
-        <Form addTrick={this.state.addTrick}/>
+        <Form addTrick={this.addTrick}/>
         <Tricks tricks={this.state.tricks}/>
       </div>
     );
