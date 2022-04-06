@@ -1,13 +1,13 @@
 import React from 'react';
 import './Card.css';
 
-const Card = () => {
+const Card = ({tricks}) => {
     let card = (
         <div className="card">
-            <p> Trick </p>
-            <p> Obstacle: </p>
+            <p> {`${tricks[0].stance} ${tricks[0].name}`} </p>
+            <p> {`Obstacle: ${tricks[0].obstacle}`} </p>
             <p> Link to Tutorial: </p>
-            <a href="https://www.google.com">google.com</a>
+            <a href={tricks[0].tutorial}>{tricks[0].tutorial}</a>
         </div>
     )
 

@@ -2,8 +2,8 @@ import React from 'react';
 import Card from './Card.js';
 import './Tricks.css';
 
-const Tricks = () => {
-    let output = <Card />;
+const Tricks = ({tricks}) => {
+    let output = <Card tricks={tricks}/>;
 
     return (
         <div className="tricks">
