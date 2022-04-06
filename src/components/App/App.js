@@ -26,7 +26,7 @@ class App extends Component {
 
   addTrick = (newTrick) => {
     console.log(newTrick);
-    this.setState({ tricks: [...this.state.tricks].push(newTrick) })
+    this.setState({ tricks: [...this.state.tricks, newTrick] })
   }
   
   render() {

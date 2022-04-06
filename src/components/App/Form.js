@@ -8,18 +8,21 @@ class Form extends Component {
             stance: '',
             trick: '',
             obstacle: '',
-            link: ''
+            link: '',
         }
     }
 
     updateState = (e) => {
         const {name, value} = e.target;
         this.setState({ ...this.state, [name]: value })
+        console.log(this.state)
     }
 
     submitTrick = (e) => {
         e.preventDefault()
+        console.log("working")
         const input = { ...this.state, id: Date.now() };
+        console.log(input);
         this.props.addTrick(input);
         this.setState({
             stance: '',
@@ -46,7 +49,7 @@ class Form extends Component {
                     <option value="stairs"> Stairs </option>
                     <option value="pool"> Pool </option>
                 </select>
-                <input type="text" name="link" value={this.state.link} placeholder="Link to Tutorial"onChange={(e) => this.updateState(e)} required/>
+                <input type="text" name="link" value={this.state.link} placeholder="Link to Tutorial" onChange={(e) => this.updateState(e)} required/>
                 <input type="submit" value="Send it!" onSubmit={(e) => this.submitTrick(e)}/>
             </form>
         )
